@@ -14,6 +14,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @Slf4j
 @RequestMapping("/admin/category")
@@ -65,6 +67,29 @@ public class CategoryController {
         PageResult pageResult = categoryService.pageQuery(categoryPageQueryDTO);
 
         return Result.success(pageResult);
+    }
+
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用禁用分类")
+    public Result startOrStop(@PathVariable Integer status, Long id) {
+        log.info("启用禁用分类, {}, {}", status, id);
+        categoryService.startOrStop(status, id);
+
+        return Result.success();
+    }
+
+    /**
+     * 根据id删除分类
+     * @param id
+     * @return
+     */
+    @DeleteMapping
+    @ApiOperation("根据id删除分类")
+    public Result delete(Long id) {
+        log.info("根据id删除分类, {}", id);
+        categoryService.deleteById(id);
+
+        return Result.success();
     }
 
 }
