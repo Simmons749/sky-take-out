@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -107,5 +108,17 @@ public class CategoryServiceImpl implements CategoryService {
 
         categoryMapper.deleteById(id);
 
+    }
+
+    /**
+     * 根据类型查询分类
+     * @param type
+     * @return
+     */
+    public List<Category> list(Integer type) {
+
+        List<Category> categoryList = categoryMapper.list(type);
+
+        return categoryList;
     }
 }
