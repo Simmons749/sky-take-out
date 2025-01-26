@@ -8,6 +8,6 @@ sky:
     password: root
   alioss:
     endpoint: https://oss-cn-beijing.aliyuncs.com
-    access-key-id: lllllllll
-    access-key-secret: llllllll
+    access-key-id: ${ACCESS_KEY_ID}
+    access-key-secret: ${ACCESS_KEY_SECRET}
     bucket-name: shx-sky-itcast
