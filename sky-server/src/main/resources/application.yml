@@ -54,3 +54,8 @@ sky:
     appid: ${sky.wechat.appid}
     secret: ${sky.wechat.secret}
 
+  shop:
+    address: 山东省泰安市泰山区乐亿广告
+  baidu:
+    ak: LE7El16ziGc8kJtyKb1gsAlLf0f3wvet
+

@@ -32,6 +32,24 @@
             <if test="detail != null">
                 detail = #{detail},
             </if>
+            <if test="provinceCode != null and provinceCode != ''">
+                province_code = #{provinceCode},
+            </if>
+            <if test="provinceName != null and provinceName != ''">
+                province_name = #{provinceName},
+            </if>
+            <if test="cityCode != null and cityCode != ''">
+                city_code = #{cityCode},
+            </if>
+            <if test="cityName != null and cityName != ''">
+                city_name = #{cityName},
+            </if>
+            <if test="districtCode != null and districtCode != ''">
+                district_code = #{districtCode},
+            </if>
+            <if test="districtName != null and districtName != ''">
+                district_name = #{districtName},
+            </if>
             <if test="label != null">
                 label = #{label},
             </if>
